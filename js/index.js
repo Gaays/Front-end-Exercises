@@ -29,7 +29,7 @@ for (let i = 0; i < productData.length; i++) {
 	str +=
 		`<li data-price="${price}" data-time="${time}" data-hot="${hot}"><a href="#" >
             <img src="${img}" alt="">
-            <p title="${title}">HUAWEI P10 Plus 6GB+128GB 全网通版（钻雕金）</p>
+            <p title="${title}">${title}</p>
             <span>￥${price}</span>
             <span>时间：${time}</span>
             <span>热度：${hot}</span>
@@ -41,26 +41,35 @@ productBox.innerHTML = str;
 //handleClick
 ~ function() {
 	let sortAry = ['data-time', 'data-price', 'data-hot'];
-
-	for (let i = 0; i < sortList.length; i++) {
+	for (let i = 0; i < sortAry.length; i++) {
 		let curLink = sortList[i];
 		curLink.flag = -1;
 		curLink.index = i;
-		// console.log(sortList[i].flag)
 		curLink.onclick = function() {
+			for (let j = 0; j < sortAry.length; j++) {
+				console.log(this!=sortList[j]);
+				console.log(sortList[j])
+				if (this != sortList[j])
+					sortList[j].flag = -1;
+			}
 			this.flag *= -1
 			sortFun.call(this)
 		}
 	};
 
 	let sortFun = function() {
+		let _this = this;
 		let productAry = [].slice.call(productList);
 		productAry.sort((pre, next) => {
-			preIn = pre.getAttribute(sortAry[this.index]);
-			nextIn = next.getAttribute(sortAry[this.index]);
-			return ((preIn - nextIn) * this.flag)
+			if (this.index === 0) {
+				preIn = pre.getAttribute(sortAry[_this.index]).replace(/-/g, '');
+				nextIn = next.getAttribute(sortAry[_this.index]).replace(/-/g, '');
+			} else {
+				preIn = pre.getAttribute(sortAry[_this.index]);
+				nextIn = next.getAttribute(sortAry[_this.index]);
+			}
+			return ((preIn - nextIn) * _this.flag)
 		})
-		// console.log(productAry)
 		productAry.forEach((item, index) => {
 			let nodo = productAry[index];
 			productBox.appendChild(nodo);
