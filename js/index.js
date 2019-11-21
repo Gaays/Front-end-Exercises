@@ -1,7 +1,7 @@
 let productData = '',
 	productBox = document.querySelector('.productBox'),
 	headerBox = document.querySelector('.headerBox'),
-	sortList = document.getElementsByTagName('a'),
+	sortList = headerBox.getElementsByTagName('a'),
 	productList = productBox.getElementsByTagName('li');
 
 //ajax获取数据
@@ -41,12 +41,12 @@ productBox.innerHTML = str;
 //handleClick
 ~ function() {
 	let sortAry = ['data-time', 'data-price', 'data-hot'];
-	for (let i = 0; i < sortAry.length; i++) {
+	for (let i = 0; i < sortList.length; i++) {
 		let curLink = sortList[i];
 		curLink.flag = -1;
 		curLink.index = i;
 		curLink.onclick = function() {
-			for (let j = 0; j < sortAry.length; j++) {
+			for (let j = 0; j < sortList.length; j++) {
 				console.log(this!=sortList[j]);
 				console.log(sortList[j])
 				if (this != sortList[j])
@@ -56,11 +56,12 @@ productBox.innerHTML = str;
 			sortFun.call(this)
 		}
 	};
-
+	//排序
 	let sortFun = function() {
 		let _this = this;
 		let productAry = [].slice.call(productList);
 		productAry.sort((pre, next) => {
+			//判断时间排序
 			if (this.index === 0) {
 				preIn = pre.getAttribute(sortAry[_this.index]).replace(/-/g, '');
 				nextIn = next.getAttribute(sortAry[_this.index]).replace(/-/g, '');
