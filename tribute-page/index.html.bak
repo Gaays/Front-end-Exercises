@@ -1,0 +1,92 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>香农</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		
+	</head>
+	<body>
+
+		<div class="container">
+			<div class="jumbotron">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2 class="text-center">Claude Shannon</h2>
+						<i>
+							<p class="text-center">the father of information theory</p>
+						</i>
+						<div class="thumbnail">
+							<img src="https://c2.staticflickr.com/4/3689/10613180113_fdf7bcd316_b.jpg">
+							<!-- <img src="https://c2.staticflickr.com/4/3689/10613180113_fdf7bcd316_b.jpg" > -->
+							<div class="caption text-center">克劳德·艾尔伍德·香农</div>
+						</div>
+					</div>
+					<div class=" ">
+						<p class="text-center"><strong>Here's a time line of Claude Shannon's life:</strong></p>
+						<ul>
+							<li><strong>1916</strong>-Born in Petoskey,Michigan</li>
+							<li><strong>1932</strong>-Graduating from Gaylord High School</li>
+							<li><strong>1936</strong>-Graduated in 1936 with two bachelor's degrees: one in electrical engineering and the other in mathematics.Then work on Vannevar Bush's differential analyzer, an early analog computer.</li>
+							<li><strong>1938</strong>-Writes his master's degree thesis, A Symbolic Analysis of Relay and Switching Circuits.[10] A paper from this thesis was published in 1938.</li>
+							<li><strong>1940</strong>-Received PhD from MIT </li>
+							<li><strong>1949</strong>-Proves that the cryptographic one-time pad is unbreakable.He also proved that any unbreakable system must have essentially the same characteristics as the one-time pad: the key must be truly random, as large as the plaintext, never reused in whole or part, and be kept secret.</li>
+							<li><strong>1956</strong>-Joins the MIT faculty to work in the Research Laboratory of Electronics (RLE). </li>
+							<li><strong>2001</strong>-Dies at the age of 84, on February 24, 2001</li>
+						</ul>
+						<p><em>view more in <a href="https://en.wikipedia.org/wiki/Claude_Shannon">wiki</a></em></p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+=======
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>香农</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		
+	</head>
+	<body>
+
+		<div class="container">
+			<div class="jumbotron">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2 class="text-center">Claude Shannon</h2>
+						<i>
+							<p class="text-center">the father of information theory</p>
+						</i>
+						<div class="thumbnail">
+							<img src="https://c2.staticflickr.com/4/3689/10613180113_fdf7bcd316_b.jpg">
+							<!-- <img src="https://c2.staticflickr.com/4/3689/10613180113_fdf7bcd316_b.jpg" > -->
+							<div class="caption text-center">克劳德·艾尔伍德·香农</div>
+						</div>
+					</div>
+					<div class=" ">
+						<p class="text-center"><strong>Here's a time line of Claude Shannon's life:</strong></p>
+						<ul>
+							<li><strong>1916</strong>-Born in Petoskey,Michigan</li>
+							<li><strong>1932</strong>-Graduating from Gaylord High School</li>
+							<li><strong>1936</strong>-Graduated in 1936 with two bachelor's degrees: one in electrical engineering and the other in mathematics.Then work on Vannevar Bush's differential analyzer, an early analog computer.</li>
+							<li><strong>1938</strong>-Writes his master's degree thesis, A Symbolic Analysis of Relay and Switching Circuits.[10] A paper from this thesis was published in 1938.</li>
+							<li><strong>1940</strong>-Received PhD from MIT </li>
+							<li><strong>1949</strong>-Proves that the cryptographic one-time pad is unbreakable.He also proved that any unbreakable system must have essentially the same characteristics as the one-time pad: the key must be truly random, as large as the plaintext, never reused in whole or part, and be kept secret.</li>
+							<li><strong>1956</strong>-Joins the MIT faculty to work in the Research Laboratory of Electronics (RLE). </li>
+							<li><strong>2001</strong>-Dies at the age of 84, on February 24, 2001</li>
+						</ul>
+						<p><em>view more in <a href="https://en.wikipedia.org/wiki/Claude_Shannon">wiki</a></em></p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+>>>>>>> 4272bae5982868d41ecfe9aaf4f02e3258e2df8d
+</html>
