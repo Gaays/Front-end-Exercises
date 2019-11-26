@@ -3,11 +3,15 @@ window.onload = function() {
 	let productImg = $(".product-img");
 	let span = $(".product-color span");
 	// console.log(span)
-	span.click(function(){
+	span.click(function() {
+		let color = $(this).attr("data-color"),
+			img = $(this).attr("data-url");
 		$(".product-color span").removeClass("active");
 		$(this).addClass("active");
-		$(".product-img").css("background-image",$(this).attr("data-url"))
-		$("body").css("background",$(this).attr("data-color"));
+		productImg.css("background-image", img);
+		$("body").css("background", color);
+		$(".cart").css("color", color);
+
 		console.log($(this).data("url"));
 	});
 
