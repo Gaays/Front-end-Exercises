@@ -5,26 +5,58 @@
 		<title>Product Card</title>
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
 		 crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/3d7288c9d1.js" crossorigin="anonymous"></script>
 		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="css/css.css" />
 	</head>
 	<body>
-		<div class="product-card">
+		<!-- 导航栏 -->
+		<!-- <div class="nav">
+			
+		</div> -->
+		<div class="productCard">
 			<h2>男子运动鞋</h2>
 			<p>Nike Air Max 270 React</p>
-			<div class="product-img"></div>
-			<div class="product-color">
+			<div class="productImg"></div>
+			<div class="productColor">
 				<span class="black active" data-color="#2d3436" data-url="url(img/black.jpg)"></span>
 				<span class="light-green" data-color="#81ecec" data-url="url(img/light-green.jpg)"></span>
 				<span class="brown" data-color="#fdcb6e" data-url="url(img/brown.jpg)"></span>
 			</div>
+			<!-- 尺码选择 -->
 			<!-- <div class="product-size">
 				<input type="radio" name="" id="" value=""/><label for="">39</label>
 			</div> -->
-			<div class="product-info">
-				<div class="product-price">￥1199</div>
+			<div class="productInfo">
+				<div class="productPrice">￥1199</div>
 				<a href="#" class="cart"><strong>加入购物车</strong></a>
 			</div>
 		</div>
+
+		<div class="menuList">
+			<!-- 搜索按钮 -->
+			<div class="searchBox colorful">
+				<input class="searchTxt colorful" type="text" placeholder="请输入搜索内容" value="" />
+				<a href="#" class="searchButton colorfulBtn">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</a>
+			</div>
+
+			<!-- 收藏按钮 -->
+			<div class="likeBox colorful">
+				<input class="likeTxt colorful" type="text" placeholder="收藏" value="" disabled="disabled" />
+				<a href="#" class="likeButton colorfulBtn">
+					<i class="fa fa-heart" aria-hidden="true"></i>
+				</a>
+			</div>
+			<!-- 购物车按钮 -->
+			<div class="cartBox colorful">
+				<input class="cartTxt colorful" type="text" placeholder="购物车" value="" disabled="disabled" />
+				<a href="#" class="cartButton colorfulBtn">
+					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+
 	</body>
 </html>
