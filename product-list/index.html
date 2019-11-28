@@ -3,11 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Product Card</title>
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-		 crossorigin="anonymous"></script>
-		<script src="https://kit.fontawesome.com/3d7288c9d1.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+		<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		 crossorigin="anonymous">
+
 		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" type="text/css" href="css/css.css" />
+		<link rel="stylesheet" type="text/css" href="css/less.css" />
 	</head>
 	<body>
 		<!-- 导航栏 -->
@@ -18,18 +20,29 @@
 			<h2>男子运动鞋</h2>
 			<p>Nike Air Max 270 React</p>
 			<div class="productImg"></div>
+			<!-- 尺码选择 -->
+			<div class="productSize">
+				<div class="sizeBox">
+					<button type="button" class="btn btn-outline-secondary">39</button>
+					<button type="button" class="btn btn-outline-secondary">39.5</button>
+					<button type="button" class="btn btn-outline-secondary">40</button>
+					<button type="button" class="btn btn-outline-secondary">41</button>
+				</div>
+			</div>
+			<!-- 颜色 -->
 			<div class="productColor">
 				<span class="black active" data-color="#2d3436" data-url="url(img/black.jpg)"></span>
 				<span class="light-green" data-color="#81ecec" data-url="url(img/light-green.jpg)"></span>
 				<span class="brown" data-color="#fdcb6e" data-url="url(img/brown.jpg)"></span>
 			</div>
-			<!-- 尺码选择 -->
-			<!-- <div class="product-size">
-				<input type="radio" name="" id="" value=""/><label for="">39</label>
-			</div> -->
+
 			<div class="productInfo">
-				<div class="productPrice">￥1199</div>
-				<a href="#" class="cart"><strong>加入购物车</strong></a>
+				<div class="productPrice active" data-price="1199">￥1199</div>
+				<!-- <a href="#" class="cart"><strong>加入购物车</strong></a> -->
+				<a href="#" class="beforeBtn"><strong>上一步</strong></a>
+				<a href="#" class="nextBtn active"><strong>下一步</strong></a>
+				<a href="#" class="submitBtn"><strong>提交订单</strong></a>
+				
 			</div>
 		</div>
 
@@ -54,6 +67,13 @@
 				<input class="cartTxt colorful" type="text" placeholder="购物车" value="" disabled="disabled" />
 				<a href="#" class="cartButton colorfulBtn">
 					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+				</a>
+			</div>
+			<!-- 分享按钮 -->
+			<div class="shareBox colorful">
+				<input class="shareTxt colorful" type="text" placeholder="分享" value="" disabled="disabled" />
+				<a href="#" class="shareButton colorfulBtn">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
 				</a>
 			</div>
 		</div>

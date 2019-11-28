@@ -1,7 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "Open Sans", sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
 }
 
@@ -9,13 +9,15 @@ body {
 	background: #2d3436;
 	transition: 0.6s linear;
 }
-
-
-.productCard {
+.middle(){
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.productCard {
+	.middle();
 	width: 600px;
 	padding: 50px;
 	background-color: #f5f5f5;
@@ -28,45 +30,35 @@ body {
 	background-image: url(../img/black.jpg);
 	background-position: center;
 	background-size: cover;
-	/* position: absolute; */
 	backface-visibility: hidden;
 	overflow: hidden;
 	transform: perspective(600px) rotateY(0deg);
 	transition: 0.6s linear;
 }
 
-
 .productSize {
-	backface-visibility: hidden;
-	position: absolute;
-	transition: transform 0.6s linear;
-	transform: perspective(600px) rotateY(0deg);
-}
-
-.mid {
-	background-color: #66ccff;
-	/* width: 200px; */
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	backface-visibility: hidden;
+	transition: transform 0.6s linear;
+	transform: translate(-50%, -50%) perspective(600px) rotateY(180deg);
 }
 
 .sizeBox {
-	/* text-align: center; */
-	/* margin-right: auto; */
+	button {
+		display: inline-flex;
+		width: 40px;
+		height: 40px;
+		justify-content: center;
+		align-items: center;
+		color: #2c3e50;
+		font-size: 18px;
+		transition: 0.4s;
+		border-radius: 50%;
+	}
 }
 
-.sizeBox span {
-	/* display: inline-flex;*/
-	/* justify-content: center; */
-	/* align-content: center; */
-	margin: 10px 10px;
-	background-color: red;
-	/* text-align: center; */
-	width: 50px;
-	height: 50px;
-}
 
 .productColor {
 	margin-bottom: 40px;
@@ -104,6 +96,7 @@ body {
 
 .productPrice {
 	font-size: 26px;
+	display: none;
 }
 
 /* .cart {
@@ -119,15 +112,33 @@ body {
 .cart:hover {
 	transform: scale(1.2);
 } */
-
-.next {
-	margin-left: auto;
+.btn(){
 	color: #2d3436;
 	text-decoration: none;
 	border: 2px solid;
 	padding: 8px 24px;
 	border-radius: 20px;
 	transition: 0.4s linear;
+}
+.nextBtn {
+	.btn();
+	margin-left: auto;
+	transition: 0.4s linear;
+	display: none;
+}
+.beforeBtn{
+	.btn();
+	display: none;
+}
+.submitBtn{
+	.btn();
+	margin-left: auto;
+	display: none;
+	
+}
+
+.active{
+	display: inline;
 }
 
 /* menuList style */

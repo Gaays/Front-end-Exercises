@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: #2d3436;
+  transition: 0.6s linear;
+}
+.productCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  padding: 50px;
+  background-color: #f5f5f5;
+  border-radius: 35px;
+}
+.productImg {
+  width: 500px;
+  height: 300px;
+  background-image: url(../img/black.jpg);
+  background-position: center;
+  background-size: cover;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transform: perspective(600px) rotateY(0deg);
+  transition: 0.6s linear;
+}
+.productSize {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  backface-visibility: hidden;
+  transition: transform 0.6s linear;
+  transform: translate(-50%, -50%) perspective(600px) rotateY(180deg);
+}
+.sizeBox button {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.productColor {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.productColor span {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  position: relative;
+}
+.productColor .active:after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  border: 2px solid #8888;
+  border-radius: 50%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -4px;
+  left: -4px;
+}
+.productInfo {
+  width: 500px;
+  display: flex;
+  align-items: center;
+}
+.productPrice {
+  font-size: 26px;
+  display: none;
+}
+/* .cart {
+	margin-left: auto;
+	color: #2d3436;
+	text-decoration: none;
+	border: 2px solid;
+	padding: 8px 24px;
+	border-radius: 20px;
+	transition: 0.4s linear;
+}
+
+.cart:hover {
+	transform: scale(1.2);
+} */
+.nextBtn {
+  color: #2d3436;
+  text-decoration: none;
+  border: 2px solid;
+  padding: 8px 24px;
+  border-radius: 20px;
+  margin-left: auto;
+  transition: 0.4s linear;
+  display: none;
+}
+.beforeBtn {
+  color: #2d3436;
+  text-decoration: none;
+  border: 2px solid;
+  padding: 8px 24px;
+  border-radius: 20px;
+  transition: 0.4s linear;
+  display: none;
+}
+.submitBtn {
+  color: #2d3436;
+  text-decoration: none;
+  border: 2px solid;
+  padding: 8px 24px;
+  border-radius: 20px;
+  transition: 0.4s linear;
+  margin-left: auto;
+  display: none;
+}
+.active {
+  display: inline;
+}
+/* menuList style */
+.menuList {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  bottom: 8px;
+  right: 8px;
+  align-items: flex-end;
+}
+.menuList div {
+  margin-top: 10px;
+}
+.colorful {
+  background-color: #f5f5f5;
+}
+.colorfulBtn {
+  color: #2d3436;
+}
+/* searchBox style */
+.searchBox {
+  height: 50px;
+  border: #122B40;
+  border-radius: 50px;
+}
+.searchTxt {
+  text-align: center;
+  line-height: 50px;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  float: left;
+  width: 0;
+  transition: 0.4s;
+}
+.searchButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  text-decoration: none;
+}
+.searchBox:hover > .searchTxt {
+  width: 120px;
+  margin-left: 10px;
+}
+.searchBox:hover > .searchButton {
+  background: #f5f5f5;
+}
+/* likeBox style */
+.likeBox {
+  height: 50px;
+  border: #122B40;
+  border-radius: 50px;
+}
+.likeButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  text-decoration: none;
+}
+.likeTxt {
+  line-height: 50px;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  float: left;
+  width: 0;
+  transition: 0.4s;
+}
+.likeBox:hover > .likeTxt {
+  width: 50px;
+}
+.likeBox:hover > .likeButton {
+  background: #f5f5f5;
+}
+/* cartBox style */
+.cartBox {
+  height: 50px;
+  /* background-color: #2c3e50; */
+  border: #122B40;
+  border-radius: 50px;
+}
+.cartButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  text-decoration: none;
+}
+.cartTxt {
+  line-height: 50px;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  float: left;
+  width: 0;
+  transition: 0.4s;
+}
+.cartBox:hover > .cartTxt {
+  width: 70px;
+}
+.cartBox:hover > .cartButton {
+  background: #f5f5f5;
+}
+/* shareBox */
+.shareBox {
+  height: 50px;
+  border: #122B40;
+  border-radius: 50px;
+}
+.shareTxt {
+  line-height: 50px;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  float: left;
+  width: 0;
+  transition: 0.4s;
+}
+.shareButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  text-decoration: none;
+}
+.shareBox:hover > .shareTxt {
+  width: 50px;
+}
+.shareBox:hover > .shareButton {
+  background: #f5f5f5;
+}
+input::-webkit-input-placeholder {
+  text-align: center;
+}
+/* color */
+.black {
+  background: #2d3436;
+}
+.light-green {
+  background: #81ecec;
+}
+.brown {
+  background: #fdcb6e;
+}

@@ -27,8 +27,8 @@
 ### 学到的知识：
 
 - CSS 使用`transition`属性不仅可以移动元素位置，还可以添加动画效果让页面变得更加精致。
-- CSS 使用``input::placeholder`可以改变文本框placeholder的样式。
-- CSS flex知识
+- CSS 使用`input::placeholder`可以改变文本框placeholder的样式。
+- CSS flex知识。
 
 ### 修改历史：
 
@@ -38,7 +38,8 @@
 **19/11/27**
 根据昨天练习的CSS搜索框，添加了搜索框、购物车、收藏按钮的动画效果
 
-
+**19/11/28**
+使用less重写css，初步实现翻页动画
 
 ## 4.搜索框
 
