@@ -1,11 +1,11 @@
 # 前端项目练习
 
-## 1.tribute-page
+## 1.[tribute-page](https://gaays.github.io/Front-end-Exercises/tribute-page/index.html)
 跟freecodecamp学前端，练习贡献页面（响应式布局）
 
-## 2.商城练习
+## 2.[商城练习](https://gaays.github.io/Front-end-Exercises/shop/index.html)
 
-模拟练习搭建一个商城展示页面
+模拟练习搭建一个商城展示页面,可按时间、价格、热度排序
 
 ### 学到的知识：
 
@@ -22,7 +22,7 @@
 
 
 
-## 3.商品选择页面练习
+## 3.[商品选择页面练习](https://gaays.github.io/Front-end-Exercises/product-list/index.html)
 
 ### 学到的知识：
 
@@ -41,7 +41,7 @@
 **19/11/28**
 使用less重写css，初步实现翻页动画
 
-## 4.搜索框
+## 4.[搜索框](https://gaays.github.io/Front-end-Exercises/search-list/index.html)
 
 **....**
 
