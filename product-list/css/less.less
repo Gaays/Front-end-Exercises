@@ -1,3 +1,4 @@
+// "out":true,"compress": false
 * {
 	margin: 0;
 	padding: 0;
@@ -8,6 +9,11 @@
 body {
 	background: #2d3436;
 	transition: 0.6s linear;
+}
+a:hover{
+	text-decoration: none;
+	color: inherit;
+	outline: none;
 }
 .middle(){
 	position: absolute;
@@ -32,17 +38,21 @@ body {
 	background-size: cover;
 	backface-visibility: hidden;
 	overflow: hidden;
-	transform: perspective(600px) rotateY(0deg);
+	// transform: perspective(600px) rotateY(0deg);
 	transition: 0.6s linear;
 }
-
+.selectBox{
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
 .productSize {
+	background-color: darkolivegreen;
+	width: 500px;
+	height: 320px;
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	backface-visibility: hidden;
-	transition: transform 0.6s linear;
-	transform: translate(-50%, -50%) perspective(600px) rotateY(180deg);
+	transition:  0.6s linear;
+	display: none;
 }
 
 .sizeBox {
@@ -99,19 +109,7 @@ body {
 	display: none;
 }
 
-/* .cart {
-	margin-left: auto;
-	color: #2d3436;
-	text-decoration: none;
-	border: 2px solid;
-	padding: 8px 24px;
-	border-radius: 20px;
-	transition: 0.4s linear;
-}
 
-.cart:hover {
-	transform: scale(1.2);
-} */
 .btn(){
 	color: #2d3436;
 	text-decoration: none;
@@ -134,7 +132,7 @@ body {
 	.btn();
 	margin-left: auto;
 	display: none;
-	
+
 }
 
 .active{
@@ -196,7 +194,7 @@ body {
 
 .searchBox:hover>.searchTxt {
 	width: 120px;
-	margin-left: 10px;
+	margin-left: 20px;
 }
 
 .searchBox:hover>.searchButton {
