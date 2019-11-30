@@ -41,6 +41,10 @@
 **19/11/28**
 使用less重写css，初步实现翻页动画
 
+**19/11/30-19/12/1**
+
+[用bootstrap重写，实现响应式布局](https://gaays.github.io/Front-end-Exercises/product-list-bootstrap/index.html)
+
 ## 4.[搜索框](https://gaays.github.io/Front-end-Exercises/search-list/index.html)
 
 **....**
