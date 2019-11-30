@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: gray;
+}
+.navbar {
+  margin-bottom: 0;
+  background-color: #f5f5f5;
+}
+.productBox {
+  background-color: #fff;
+  transform: translateY(30vh);
+}
+.productImg {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
