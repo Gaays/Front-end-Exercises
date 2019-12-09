@@ -82,19 +82,6 @@ body {
   font-size: 26px;
   display: none;
 }
-/* .cart {
-	margin-left: auto;
-	color: #2d3436;
-	text-decoration: none;
-	border: 2px solid;
-	padding: 8px 24px;
-	border-radius: 20px;
-	transition: 0.4s linear;
-}
-
-.cart:hover {
-	transform: scale(1.2);
-} */
 .nextBtn {
   color: #2d3436;
   text-decoration: none;
