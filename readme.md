@@ -47,14 +47,51 @@
 
 ## 4.[搜索框](https://gaays.github.io/Front-end-Exercises/search-list/index.html)
 
-
 ## 5.[hover card](https://gaays.github.io/Front-end-Exercises/hover-animation/index.html)
 
 **bug：**
 
-![bug](hover-animation/img/bug.png)
+<img src="hover-animation/img/bug.png" alt="bug" style="zoom:50%;" />
 
 因为使用相对定位，所以card的区域实际上为蓝框区域，此区域内:hover伪类都会触发
+
+
+
+## 6.[可隐藏式侧滑导航栏](https://gaays.github.io/Front-end-Exercises/side-menubar/index.html)
+
+### 学到知识：
+
+- 通过`:checked`伪类可以实现监听按钮状态。在本例中可以用来来监听导航栏打开与否
+    代码如下：
+
+    ```html
+    <input type="checkbox" id="check" />
+    <label for="check"> //<label>标签使对这两个按钮的点击都关联到id为check的单选框上
+        <i class="fas fa-bars navbar" aria-hidden="true" id="btn"></i>
+        <i class="fas fa-times navbar" aria-hidden="true" id="cancel"></i>
+    </label>
+    ```
+
+    ```less
+    ...
+    #check {
+    	display: none; /*隐藏单选框*/
+        /*当检测到点击后进行操作*/
+    	&:checked ~ .menubar {  
+    		left: 0;
+    	}
+    	&:checked ~ label #btn {
+    		opacity: 0;
+    		pointer-events: none;
+    	}
+    	&:checked ~ label #cancel {
+    		left: 150px;
+    	}
+    }
+    ...
+    ```
+
+    
 
 **....**
 
