@@ -51,7 +51,7 @@
 
 **bug：**
 
-<img src="hover-animation/img/bug.png" alt="bug" style="zoom:50%;" />
+<img src="hover-animation/img/bug.png" alt="bug" style="zoom: 33%;" />
 
 因为使用相对定位，所以card的区域实际上为蓝框区域，此区域内:hover伪类都会触发
 
@@ -89,6 +89,27 @@
     	}
     }
     ...
+    ```
+
+    
+
+## 7.[卡片滑动效果](https://gaays.github.io/Front-end-Exercises/side-menubar/index.html)
+
+### 学到知识：
+
+- 通过css`~`选择器可以选中同级其他元素，实现鼠标滑过一个元素，其余元素向该元素方向旋转一定角度
+    部分代码：
+
+    ```css
+    .container:hover .card{/*让所有元素转向*/
+    	transform: perspective(500px) rotateY(30deg);
+    }
+    .card:hover { /*选中元素不转向*/
+    	transform: perspective(500px) rotateY(0deg);
+    }
+    .card:hover~.card{/*选择选中元素后的元素使其向选中元素方向转向*/
+    	transform: perspective(500px) rotateY(-30deg);
+    }
     ```
 
     
