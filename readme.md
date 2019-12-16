@@ -93,7 +93,7 @@
 
     
 
-## 7.[卡片滑动效果](https://gaays.github.io/Front-end-Exercises/side-menubar/index.html)
+## 7.[卡片滑动效果](https://gaays.github.io/Front-end-Exercises/card-effect/index.html)
 
 ### 学到知识：
 
