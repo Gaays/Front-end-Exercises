@@ -51,7 +51,7 @@
 
 **bug：**
 
-<img src="hover-animation/img/bug.png" alt="bug" style="zoom: 33%;" />
+<img src="/hover-animation/img/bug.png" alt="bug" style="zoom: 33%;" />
 
 因为使用相对定位，所以card的区域实际上为蓝框区域，此区域内:hover伪类都会触发
 
@@ -113,6 +113,17 @@
     ```
 
     
+
+## 8.[倒计时页面](https://gaays.github.io/Front-end-Exercises/countdown/index.html)
+
+### 学到知识：
+
+- 通过css`background-blend-mode`属性给背景加滤镜效果
+
+### 计划完成：
+
+- [ ] 修改为农历新年
+- [ ] 根据当前日期自动查询，不需手动设置时间
 
 **....**
 
