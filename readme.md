@@ -122,8 +122,10 @@
 
 ### 计划完成：
 
-- [ ] 修改为农历新年
-- [ ] 根据当前日期自动查询，不需手动设置时间
+**19/12/28**
+
+- [x] 修改为[农历新年](https://gaays.github.io/Front-end-Exercises/countdown/nongli/index.html)
+- [x] 根据当前日期自动查询，不需手动设置时间
 
 **....**
 
