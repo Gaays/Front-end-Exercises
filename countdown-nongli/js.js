@@ -11,23 +11,35 @@ xhr.onreadystatechange = function() {
 
 }
 xhr.send(null);
-console.log(nongli)
+console.log(nongli);
+
+
+
+
+(function fun() {
+	let date = new Date();
+	let nowYear = date.getFullYear();
+	let nextYear = nowYear + 1;
+	console.log(nextYear);
+	$('#years').text(nextYear);
+})();
+
 
 function springFes() {
 	let date = new Date();
-	let nowYear = date.getFullYear();	
+	let nowYear = date.getFullYear();
 	let nextYear = nowYear + 1;
-	let fesTxt='';
+	let fesTxt = '';
 	// 农历新年对应公历日期
-	for(let i =0;i<nongli.length;i++){
-		if(nongli[i].year==nextYear){
+	for (let i = 0; i < nongli.length; i++) {
+		if (nongli[i].year == nextYear) {
 			// 月份判断
-			if(nongli[i].month==1)
-				fesTxt="Jan "
+			if (nongli[i].month == 1)
+				fesTxt = "Jan "
 			else
-				fesTxt="Feb "
+				fesTxt = "Feb "
 			// 农历新年日期拼接
-			fesTxt=fesTxt+nongli[i].day+","+nextYear+" 00:00:00"
+			fesTxt = fesTxt + nongli[i].day + "," + nextYear + " 00:00:00"
 			break;
 		}
 	}
@@ -38,18 +50,17 @@ function springFes() {
 	let minute = second * 60;
 	let hour = minute * 60;
 	let day = hour * 24;
-	
+
 	let d = Math.floor(gap / day);
 	let h = Math.floor((gap % day) / hour);
 	let m = Math.floor((gap % hour) / minute);
 	let s = Math.floor((gap % minute) / second);
-	$('#years').text(nextYear);
 	$('#day').text(d);
 	$('#hour').text(h);
 	$('#minute').text(m);
 	$('#second').text(s);
 }
-
+// year();
 setInterval(function() {
 	springFes();
 }, 1000)

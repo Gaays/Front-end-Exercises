@@ -51,7 +51,7 @@
 
 **bug：**
 
-<img src="/hover-animation/img/bug.png" alt="bug" style="zoom: 33%;" />
+<img src="https://s2.ax1x.com/2019/12/29/lnAD9f.png" alt="bug" style="zoom: 33%;" />
 
 因为使用相对定位，所以card的区域实际上为蓝框区域，此区域内:hover伪类都会触发
 
@@ -125,7 +125,12 @@
 **19/12/28**
 
 - [x] 修改为[农历新年](https://gaays.github.io/Front-end-Exercises/countdown-nongli/index.html)
+
 - [x] 根据当前日期自动查询，不需手动设置时间
+
+**19/12/29**
+
+修改逻辑bug使年份不会重复刷新
 
 **....**
 

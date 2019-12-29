@@ -1,5 +1,14 @@
 let countDate = new Date('Jan 1,2020 00:00:00').getTime();
 
+(function fun() {
+	let date = new Date();
+	let nowYear = date.getFullYear();
+	let nextYear = nowYear + 1;
+	console.log(nextYear);
+	$('#years').text(nextYear);
+})();
+
+
 function newYear() {
 	let now = new Date().getTime(),
 		gap = countDate - now;
