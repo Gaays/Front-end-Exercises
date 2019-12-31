@@ -45,7 +45,7 @@
 
 [用bootstrap重写，实现响应式布局](https://gaays.github.io/Front-end-Exercises/product-list-bootstrap/index.html)
 
-## 4.[搜索框](https://gaays.github.io/Front-end-Exercises/search-list/index.html)
+## 4.[搜索框](https://gaays.github.io/Front-end-Exercises/search-box/index.html)
 
 ## 5.[hover card](https://gaays.github.io/Front-end-Exercises/hover-animation/index.html)
 
