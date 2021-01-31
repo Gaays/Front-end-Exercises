@@ -41,66 +41,6 @@
 			z-index: -1;
 		}
 	</style>
-	<!-- <style>
-		* {
-			margin: 0;
-			padding: 0;
-		}
-
-		#main {
-			box-sizing: border-box;
-			width: 100%;
-			height: 100vh;
-			background-color: #122B40;
-			margin: 0 auto;
-			position: relative;
-		}
-
-		#main div {
-			position: absolute;
-			width: 100px;
-			height: 100px;
-			overflow: hidden;
-			-moz-border-radius: 50%;
-			-webkit-border-radius: 50%;
-			border-radius: 50%;
-			/* background-image: url("img/blue.png"); */
-			background-color: #843534;
-			background-repeat: no-repeat;
-			box-sizing: border-box;
-		}
-
-		#red {
-			display: block;
-			width: 120px;
-			height: 120px;
-			position: absolute;
-			left: calc(50% - 60px);
-			bottom: calc(50% - 60px);
-			background-color: #1B6D85;
-			background-size: cover;
-			border-radius: 50%;
-			-moz-border-radius: 50%;
-			-webkit-border-radius: 50%
-		}
-
-		#div1 {
-			width: 100px;
-			height: 100px;
-			background: green;
-			position: absolute;
-		}
-
-		#div2 {
-			width: 100px;
-			height: 100px;
-			background: yellow;
-			position: absolute;
-			left: 300px;
-			bottom: 200px;
-			/* z-index: -1; */
-		}
-	</style> -->
 </head>
 
 <body>
@@ -214,6 +154,7 @@
 									let circleNew = Bodies.circle(pair.bodyB.position.x, pair.bodyB.position.y, circleList[index + 1].r, {
 										friction: 1, /**设置球的摩擦力*/
 										density: 1000,//物质密度
+										frictionAir: 0.001,//空气阻力
 										render: { //设置刚体样式
 											sprite: {
 												// texture: './img/1.jpg',
@@ -256,8 +197,8 @@
 					render: { //设置刚体样式
 						sprite: {
 							// texture: './img/1.jpg',
-
 						},
+						frictionAir: 0.001,//空气阻力
 						// strokeStyle: "#eeeeee",
 						// fillStyle: "#ff3333",
 						// lineWidth: 1
@@ -277,183 +218,11 @@
 				setTimeout(() => {
 
 					World.add(engine.world, circleInstructions);
-				}, 300)
+				}, 600)
 			})
 			Engine.run(engine);//运行引擎
 			Render.run(render);//运行渲染器
 		}
-		// window.onload = function () {
-		// 	let mainDiv = document.getElementById('main')
-		// 	let heightList = []
-		// 	let screenHeight = document.body.clientHeight
-		// 	let doneFlagList = []
-		// 	let move = ''
-		// 	// let div = mainDiv.getElementsByTagName('div')
-		// 	let randomDiv = [{
-		// 		d: 100,
-		// 		c: '#66ccff',
-		// 		s: 10
-		// 	},
-		// 	{
-		// 		d: 200,
-		// 		c: '#8dff41',
-		// 		s: 10
-		// 	},
-		// 	{
-		// 		d: 300,
-		// 		c: '#fdff6c',
-		// 		s: 10
-		// 	},
-		// 	{
-		// 		d: 400,
-		// 		c: '#9925ff',
-		// 		s: 10
-		// 	},
-		// 	{
-		// 		d: 500,
-		// 		c: '#386dff',
-		// 		s: 10
-		// 	}
-		// 	];
-		// 	// console.log(div);
-		// 	document.onmousedown = function (e) {
-		// 		disX = e.clientX;
-		// 		disY = e.clientY;
-		// 		// console.log(disX, disY);
-
-		// 		let randomDivIndex = Math.floor(Math.random() * randomDiv.length)
-		// 		// let randomDivIndex = 1
-		// 		let appendDiv = document.createElement('div')
-		// 		// console.log(randomDivIndex);
-		// 		appendDiv.style.width = randomDiv[randomDivIndex].d + 'px'
-		// 		appendDiv.style.height = randomDiv[randomDivIndex].d + 'px'
-		// 		appendDiv.style.left = disX - randomDiv[randomDivIndex].d / 2 + 'px'
-		// 		appendDiv.bottom = randomDiv[randomDivIndex].s
-		// 		appendDiv.d = randomDiv[randomDivIndex].d
-		// 		appendDiv.style.background = randomDiv[randomDivIndex].c
-		// 		heightList.push(randomDiv[randomDivIndex].s)
-		// 		mainDiv.appendChild(appendDiv)
-		// 		// console.log('move', move);
-		// 		// 无动作清除定时器
-		// 		// let performance = setInterval(function () {
-		// 		// 	let flagIndex = 0
-		// 		// 	doneFlagList.forEach(item => {
-		// 		// 		if (item == true) {
-		// 		// 			flagIndex++
-		// 		// 		}
-		// 		// 	})
-		// 		// 	if (flagIndex > 0 && flagIndex == doneFlagList.length) {
-		// 		// 		window.clearTimeout(move)
-		// 		// 		console.log('clear');
-		// 		// 	}
-		// 		// }, 1000)
-		// 	}
-		// 	move = setInterval(function () {
-		// 		// console.log(mainDiv.getElementsByTagName('div').length);
-		// 		funcMove()
-
-		// 	}, 25);
-
-		// 	function funcMove() {
-		// 		for (let index = 0; index < mainDiv.getElementsByTagName('div').length; index++) {
-		// 			// console.log(screenHeight, heightList[index] + mainDiv.getElementsByTagName('div')[index].d);
-		// 			// 下落高度
-		// 			if (heightList[index] + mainDiv.getElementsByTagName('div')[index].d + 1 < screenHeight) {
-		// 				// 位移
-		// 				heightList[index] += mainDiv.getElementsByTagName('div')[index].bottom
-		// 				mainDiv.getElementsByTagName('div')[index].style.bottom = screenHeight - heightList[index] + 'px';
-
-		// 			} else {
-		// 				// mainDiv.getElementsByTagName('div')[index].style.bottom = screenHeight - mainDiv.getElementsByTagName('div')[index].bottom + 'px'
-		// 				if (mainDiv.getElementsByTagName('div')[index].style.bottom != '0px') {
-		// 					// console.log('no', mainDiv.getElementsByTagName('div')[index].style.bottom);
-		// 					mainDiv.getElementsByTagName('div')[index].style.bottom = 0 + 'px'
-		// 					doneFlagList.push(true)
-		// 				}
-		// 			}
-		// 			// 碰撞检测
-		// 			for (let crashIndex = 0; crashIndex < mainDiv.getElementsByTagName('div').length; crashIndex++) {
-		// 				if (crashIndex != index) {
-		// 					let divWidth = mainDiv.getElementsByTagName('div')[index].style.width
-		// 					// 二者最小间距
-		// 					let minDistence = mainDiv.getElementsByTagName('div')[index].d / 2 + mainDiv.getElementsByTagName('div')[crashIndex].d / 2
-		// 					// 碰撞二者圆心坐标
-		// 					let divX = mainDiv.getElementsByTagName('div')[index].getBoundingClientRect().x + mainDiv.getElementsByTagName('div')[index].d / 2
-		// 					let divY = mainDiv.getElementsByTagName('div')[index].getBoundingClientRect().y + mainDiv.getElementsByTagName('div')[index].d / 2
-		// 					let otherDivX = mainDiv.getElementsByTagName('div')[crashIndex].getBoundingClientRect().x + mainDiv.getElementsByTagName('div')[crashIndex].d / 2
-		// 					let otherDivY = mainDiv.getElementsByTagName('div')[crashIndex].getBoundingClientRect().y + mainDiv.getElementsByTagName('div')[crashIndex].d / 2
-		// 					let distence = Math.sqrt((divX - otherDivX) * (divX - otherDivX) + (divY - otherDivY) * (divY - otherDivY));
-		// 					if (minDistence > distence) {
-		// 						if (divX > otherDivX) { //当前位于未知求的右方
-		// 							mainDiv.getElementsByTagName('div')[index].style.left = mainDiv.getElementsByTagName('div')[index].getBoundingClientRect().x + 3 + 'px'
-		// 							// if (divY > otherDivY) { //预设未知球撞当前球，然后当前球改变运动
-		// 							// 	mainDiv.getElementsByTagName('div')[index].style.left = mainDiv.getElementsByTagName('div')[index].getBoundingClientRect().x + 3 + 'px'
-		// 							// } else if (divY < otherDivY) {
-		// 							// 	// mainDiv.getElementsByTagName('div')[index].style.left = mainDiv.getElementsByTagName('div')[index].getBoundingClientRect().x + 3 + 'px'
-
-		// 							// } else if (divY == otherDivY) {
-		// 							// 	mainDiv.getElementsByTagName('div')[index].style.left = mainDiv.getElementsByTagName('div')[index].getBoundingClientRect().x + 3 + 'px'
-		// 							// }
-		// 						} else if (divX < otherDivX) {
-		// 							mainDiv.getElementsByTagName('div')[index].style.left = mainDiv.getElementsByTagName('div')[index].getBoundingClientRect().x - 3 + 'px'
-		// 							// if (divY > otherDivY) {
-		// 							// 	mainDiv.getElementsByTagName('div')[index].style.left = mainDiv.getElementsByTagName('div')[index].getBoundingClientRect().x - 3 + 'px'
-
-		// 							// } else if (divY < otherDivY) {
-		// 							// 	// mainDiv.getElementsByTagName('div')[index].style.left = mainDiv.getElementsByTagName('div')[index].getBoundingClientRect().x - 3 + 'px'
-
-		// 							// } else {
-		// 							// 	mainDiv.getElementsByTagName('div')[index].style.left = mainDiv.getElementsByTagName('div')[index].getBoundingClientRect().x - 3 + 'px'
-		// 							// }
-		// 						} else if (divX == otherDivX) {
-		// 							if (divY > otherDivY) {
-		// 								mainDiv.getElementsByTagName('div')[index].style.left = mainDiv.getElementsByTagName('div')[index].getBoundingClientRect().x + 3 + 'px'
-		// 							} else if (divY < otherDivY) {
-		// 								mainDiv.getElementsByTagName('div')[index].style.left = mainDiv.getElementsByTagName('div')[index].getBoundingClientRect().x - 3 + 'px'
-
-		// 							}
-		// 						}
-		// 					}
-		// 					// console.log('distence', distence);
-		// 				}
-		// 			}
-
-		// 		}
-		// 	}
-
-		// 	// var oDiv = document.getElementById('div1');
-		// 	// var oDiv2 = document.getElementById('div2');
-		// 	// var disX = 0;
-		// 	// var disY = 0;
-		// 	// oDiv.onmousedown = function(ev) {
-		// 	// 	var ev = ev || window.event;
-		// 	// 	disX = ev.clientX - oDiv.offsetLeft;
-		// 	// 	disY = ev.clientY - oDiv.offsetbottom;
-		// 	// 	document.onmousemove = function(ev) {
-		// 	// 		var ev = ev || window.event;
-		// 	// 		var t1 = oDiv.offsetbottom;
-		// 	// 		var l1 = oDiv.offsetLeft;
-		// 	// 		var r1 = oDiv.offsetLeft + oDiv.offsetWidth;
-		// 	// 		var b1 = oDiv.offsetbottom + oDiv.offsetHeight;
-		// 	// 		var t2 = oDiv2.offsetbottom;
-		// 	// 		var l2 = oDiv2.offsetLeft;
-		// 	// 		var r2 = oDiv2.offsetLeft + oDiv2.offsetWidth;
-		// 	// 		var b2 = oDiv2.offsetbottom + oDiv2.offsetHeight;
-		// 	// 		if (b1 < t2 || l1 > r2 || t1 > b2 || r1 < l2) { // 表示没碰上
-		// 	// 			oDiv2.style.background = 'red';
-		// 	// 		} else {
-		// 	// 			oDiv2.style.background = 'blue';
-		// 	// 		}
-		// 	// 		oDiv.style.left = ev.clientX - disX + 'px';
-		// 	// 		oDiv.style.bottom = ev.clientY - disY + 'px';
-		// 	// 	}
-		// 	// 	document.onmouseup = function() {
-		// 	// 		document.onmousemove = null;
-		// 	// 		document.onmouseup = null;
-		// 	// 	}
-		// 	// 	return false;
-		// 	// }
-		// }
 	</script>
 </body>
 
