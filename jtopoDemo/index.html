@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jtopoTest</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="910" height="800"></canvas>
+</body>
+<script src="jtopo-0.4.8-min.js"></script>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById('canvas');
+        var stage = new JTopo.Stage(canvas); // 创建一个舞台对象
+        var scene = new JTopo.Scene(stage); // 创建一个场景对象
+        var node1 = new JTopo.Node("1#空压机");    // 创建一个节点
+        node1.setLocation(300, 200);    // 设置节点坐标    
+        node1.setImage('img/1.png');
+
+        var node2 = new JTopo.Node("2#空压机");    // 创建一个节点
+        node2.setLocation(300, 300);    // 设置节点坐标    
+        node2.setImage('img/1.png');
+
+        var node3 = new JTopo.Node("3#空压机");    // 创建一个节点
+        node3.setLocation(300, 400);    // 设置节点坐标    
+        node3.setImage('img/1.png');
+
+        var node4 = new JTopo.Node("4#空压机");    // 创建一个节点
+        node4.setLocation(300, 500);    // 设置节点坐标    
+        node4.setImage('img/1.png');
+
+        var node5 = new JTopo.Node("5#空压机");    // 创建一个节点
+        node5.setLocation(300, 600);    // 设置节点坐标    
+        node5.setImage('img/1.png');
+
+        var node6 = new JTopo.Node("1#水泵");    // 创建一个节点
+        node6.setLocation(200, 300);    // 设置节点坐标    
+        node6.setImage('img/water.png');
+
+        var node7 = new JTopo.Node("2#水泵");    // 创建一个节点
+        node7.setLocation(200, 400);    // 设置节点坐标    
+        node7.setImage('img/water.png');
+
+        var node8 = new JTopo.Node("3#水泵");    // 创建一个节点
+        node8.setLocation(200, 500);    // 设置节点坐标    
+        node8.setImage('img/water.png');
+
+        var node9 = new JTopo.Node("冷却塔");    // 创建一个节点
+        node9.setLocation(100, 400);    // 设置节点坐标    
+        node9.setImage('img/cooltower.png');
+
+        scene.add(node1); // 放入到场景中
+        scene.add(node2); // 放入到场景中
+        scene.add(node3); // 放入到场景中
+        scene.add(node4); // 放入到场景中
+        scene.add(node5); // 放入到场景中
+        scene.add(node6); // 放入到场景中
+        scene.add(node7); // 放入到场景中
+        scene.add(node8); // 放入到场景中
+        scene.add(node9); // 放入到场景中
+        let link = new JTopo.Link(node9, node8);
+        // link.dashedPattern = 5
+        setInterval(function () {
+            if (link.arrowsOffset == -40) {
+                // link.dashedPattern = 3;
+                link.strokeColor = '#342613'
+                link.arrowsOffset = 0;
+            } else if (link.arrowsOffset == -80) {
+                // link.dashedPattern = 5
+                link.strokeColor = '#66ccff'
+                link.arrowsOffset = -40;
+            } else {
+                link.arrowsOffset = -80
+            }
+        }, 500);
+        console.log(link);
+        link.arrowsRadius = 10;
+        scene.add(link); // 放入到场景中
+        // JTopo.Animate.stepByStep(node9, { scaleX: 20 }, 3000, true).start();
+
+
+    }
+</script>
+<style>
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(124, 117, 117);
+        box-sizing: border-box;
+    }
+
+    /* #canvas {
+        width: 500px;
+        height: 500px;
+    } */
+</style>
+
+</html>
